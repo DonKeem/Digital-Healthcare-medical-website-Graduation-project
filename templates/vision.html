@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vision</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/Vision-style.css' %}">
+</head>
+
+<body>
+
+    <div class="container-fluid" id="main">
+
+        <!-- Home -->
+        <section class="parallax-window tm-section tm-section-home" id="home" data-parallax="scroll"
+            data-image-src="{% static 'images/Healthcare.jpg' %}">
+            <div class="tm-page-content-width tm-padding-b">
+                <div class="text-center tm-site-title-wrap">
+                    
+                </div>
+                <div class="tm-textbox tm-white-bg">
+                    <h2 class="tm-green-text tm-section-title">Welcome!</h2>
+                    <p>Healthcare is a growing medical website, that with more technology and resources can cover wide medical areas</p>
+                    <p>This Website is a first draft, to make it a full professional medical website, we need access to a high capacity server, hence we can implement more services</p>
+                    <a href="#services" class="tm-btn">More info</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="parallax-window tm-section tm-section-services" id="services" data-parallax="scroll"
+            data-image-src="{% static 'img/desk.jpg' %}">
+            <div class="tm-page-content-width">
+                <div class="tm-translucent-white-bg tm-content-box tm-content-box-right tm-textbox-full-height">
+                    <div class="tm-content-box-inner">
+                        <h2 class="tm-section-title tm-blue-text" style="color: grey;">Our Services</h2>
+                        <p>Later on, we want to implement services that are important to make our process and user life cycle easier</p>
+                        <div class="media tm-media">
+                            <i class="fa fa-4x fa-podcast tm-media-icon"></i>
+                            <div class="media-body tm-media-body">
+                                <p>1- online payment is a must since a alot of transitions must be processed by Healthcare's developing department.</p>
+                            </div>
+                        </div>
+                        <div class="media tm-media">
+                            <i class="fa fa-3x fa-calendar tm-media-icon"></i>
+                            <div class="media-body tm-media-body">
+                                <p>2- online sessions and meetings or chatting between doctors and patients so that all of our services are available all in Healthcare.</p>
+                            </div>
+                        </div>
+                        <div class="media tm-media">
+                            <i class="fa fa-3x fa-bell-o tm-media-icon"></i>
+                            <div class="media-body tm-media-body">
+                                <p>3- With the technology we have today, we can implement more AI Tests available for free.</p>
+                            </div>
+                        </div>
+                        <a href="home" class="tm-btn">Home page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- load JS files -->
+    <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+
+
+
+
+</body>
+
+</html>

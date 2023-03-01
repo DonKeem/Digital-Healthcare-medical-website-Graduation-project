@@ -1,0 +1,684 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Healthcare</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+        rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+
+            <a href="home" class="navbar-brand">
+                <i class="bi-layers"></i> Healthcare
+            </a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_1">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_2">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_3">Sign up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_4">our Fields</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ourdoctors">Our Doctors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">log in</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="vision">vision</a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12">
+                        <div class="heroText">
+                            <h1 class="text-white mb-lg-5 mb-4">We are here to make Healthcare so much easier</h1>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </section>
+
+        <section class="about section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-5">Digital Healthcare</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-12 ms-lg-auto mb-5 mb-lg-0">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-intro-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-intro" type="button" role="tab" aria-controls="nav-intro"
+                                    aria-selected="true">Introduction</button>
+
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">About us</button>
+
+                                <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab" data-bs-target="#nav-faq"
+                                    type="button" role="tab" aria-controls="nav-faq" aria-selected="false">FAQs</button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-intro" role="tabpanel"
+                                aria-labelledby="nav-intro-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/WDH1.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">What does Healthcare provide</h3>
+
+                                        <p>Healthcare is a wonderful medicine website which allows patients from all
+                                            over the world to get in touch with doctors easily.</p>
+
+                                        <p>if you don't have a doctor in your area or you want Healthcare from the
+                                            comfort of your home, Healthcare will take care of that, with our
+                                            professional doctors you will feel much better.</p>
+
+                                        <p>We dream of having a healthy world where all humans can check about their
+                                            health no matter where they area, and with the technologoy we have today we
+                                            believe we can make this dream come true.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">Healthcare Family</h3>
+
+                                        <p>We are proud to be working in healthcare, we dream of having a world with no
+                                            illness, that is what we stand for, what Healthcare stands for.</p>
+
+                                        <ul class="social-icon mt-lg-5 mt-3">
+                                            <li class="me-3"><strong>Where to find?</strong></li>
+
+                                            <li><a href="https://twitter.com/search?q=tooplate"
+                                                    class="social-icon-link bi-twitter"></a></li>
+
+                                            <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
+
+                                            <li><a href="#" class="social-icon-link bi-envelope"></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12 mt-lg-0 mt-4">
+                                        <img src="{% static 'images/slide/slide2.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/Healthcare.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">Frequenlty Asked Questions</h3>
+
+                                        <div class="accordion" id="accordionGeneral">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne"
+                                                        aria-expanded="true" aria-controls="accordionGeneralOne">
+                                                        how does it work?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph"><strong>Healthcare</strong> helps
+                                                            patients find doctors more easily and from the comfort of
+                                                            home, we provide treatment for many illnesses including
+                                                            dermatologists, endocrinologists, mental health therapists,
+                                                            gynecologists, and more.</p>
+
+                                                        <p class="large-paragraph">Check our doctors and contact the
+                                                            doctor that you prefer, all doctors are proven to be the
+                                                            best in their fields.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo"
+                                                        aria-expanded="false" aria-controls="accordionGeneralTwo">
+                                                        What are available services?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">Sign up with Healthcare and become a
+                                                            member of our big family and gain access to all our
+                                                            services,</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#accordionGeneralThree" aria-expanded="false"
+                                                        aria-controls="accordionGeneralThree">
+                                                        Why Healthcare?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">a healthy body leads to healthy life,
+                                                            that's why healthcare is essential to all, specially with
+                                                            services we provide, healthcare is now easy and cheap.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="services section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+
+                    <h2 class="mb-5 text-center">Sign up </h2>
+
+                    <div class="col-lg-4 col-12 d-flex bg-primary p-0">
+                        <img src="{% static 'images/services/undraw_Online_page_re_lhgx.svg' %}"
+                            class="img-fluid services-image" alt="">
+                    </div>
+
+                    <div class="col-lg-4 col-12 p-0">
+                        <div class="services-info custom-icon-left paddingText">
+
+                            <h4 class="">sign up with healthcare </h4>
+
+                            <p class="mb-4">become a member in our big family, and if you are a doctor and care to join
+                                us, our doors are always open.</p>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12 d-flex bg-warning p-0">
+                        <img src="{% static 'images/services/undraw_online_transactions_02ka.svg' %}"
+                            class="img-fluid services-image" alt="">
+                    </div>
+
+                    <div class="col-lg-4 col-12 p-0 order-lg-0 order-sm-5">
+
+                        <div class="services-info custom-icon-right paddingText order-lg-0 order-sm-2">
+
+                            <h4 class="">Doctor's Sign up</h4>
+
+
+
+                            <a class="custom-btn custom-bg-dark btn" href="doctorsignup">Sign up</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12 d-flex bg-success p-0 order-lg-0 order-sm-4">
+                        <img src="{% static 'images/services/undraw_content_team_3epn.svg' %}"
+                            class="img-fluid services-image" alt="">
+                    </div>
+
+                    <div class="col-lg-4 col-12 p-0">
+
+                        <div class="services-info custom-icon-top paddingText">
+
+                            <h4 class="">Patient's Sign up</h4>
+
+
+                            <a class="custom-btn custom-bg-dark btn" href="patientsignup">Sign up</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="work section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-5 text-center">Specialities</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="work-thumb mb-4">
+                            <div class="work-image-wrap">
+                                <a href="images/work/dermatology.png" class="image-popup">
+                                    <img src="{% static 'images/work/dermatology.png' %}" class="img-fluid work-image"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="work-text-info">
+
+
+                                <h4 class="work-title">Dermatology</h4>
+                            </div>
+                        </div>
+
+                        <div class="work-thumb mb-4">
+                            <div class="work-image-wrap">
+                                <a href="images/work/Gynecology.jpg" class="image-popup">
+                                    <img src="{% static 'images/work/Gynecology.jpg' %}" class="img-fluid work-image"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="work-text-info">
+                                <small class="work-tag bg-white shadow-lg"></small>
+
+                                <h4 class="work-title">Gynecology</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="work-thumb mb-4">
+                            <div class="work-image-wrap">
+                                <a href="images/work/Mental.jpg" class="image-popup">
+                                    <img src="{% static 'images/work/Mental.jpg' %}" class="img-fluid work-image"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="work-text-info">
+                                <small class="work-tag bg-white shadow-lg"></small>
+
+                                <h4 class="work-title">Mental Health</h4>
+                            </div>
+                        </div>
+
+                        <div class="work-thumb mb-4">
+                            <div class="work-image-wrap">
+                                <a href="images/work/general.png" class="image-popup">
+                                    <img src="{% static 'images/work/general.png' %}" class="img-fluid work-image"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="work-text-info">
+                                <h4 class="work-title">General Health assessment</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        <div class="work-thumb mb-4">
+                            <div class="work-image-wrap">
+                                <a href="images/work/Naturo.jpg" class="image-popup">
+                                    <img src="{% static 'images/work/Naturo.jpg' %}" class="img-fluid work-image"
+                                        alt="">
+                                </a>
+                            </div>
+
+                            <div class="work-text-info">
+
+                                <h4 class="work-title">Naturopathy</h4>
+                            </div>
+                        </div>
+
+                        <div class="work-thumb work-thumb-text">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-----AI DOCTOR------->
+
+
+        <div class="AI-Section">
+
+            <!------Conditions-blogs------->
+            <section id="blog">
+
+                <!--heading--->
+                <div class="blog-heading">
+
+
+                    <h3>AI Tests.</h3>
+                    <p>With the technologoy we have today, we can use it to check about serious illnesses easily and
+                        free of charge.</p>
+                    <p>With time and effort we will be able to provide more AI Tests in the near future.</p>
+                </div>
+
+                <!-------blog-container-->
+                <div class="blog-container">
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <a href="braintumor"> <img src="{% static 'images/work/brain.jpg' %}"> </a>
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <a href="braintumor" class="blog-title">Brain Tumor AI Test</a>
+                            <p> With the help of AI and Big Data, Serious illnesses like Brain Tumor can be checked
+                                easily, which will help lots of people to check about themselves easily.</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <div class="Conditions">
+
+            <!------Conditions-blogs------->
+            <section id="blog">
+
+                <!--heading--->
+                <div class="blog-heading" id="allconditions">
+
+
+                    <h3>Doctors can treat many common conditions online.</h3>
+                    <p>Our online doctors in Canada can treat many conditions without you ever having to leave home.</p>
+                    <p> You can also book a doctor’s appointment with specialists, including dermatologists,
+                        endocrinologists, mental health therapists, gynecologists, and more. See a doctor today.</p>
+                </div>
+
+                <!-------blog-container-->
+                <div class="blog-container">
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/Humans/skin.jpeg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
+                            <p> lorem ipsum</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/Humans/depression.jpeg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
+                            <p> lorem ipsum</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/Humans/Anxiety1.jpeg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <span>blabla</span>
+                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
+                            <p> lorem ipsum</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/Humans/Anxiety.jpg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <span>blabla</span>
+                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
+                            <p> lorem ipsum</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/digital health.jpg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <span>blabla</span>
+                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
+                            <p> lorem ipsum</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Services</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">How it works</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Meet our doctors</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Treatable conditions</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">AI Doctor</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Resources</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
+
+                        <li class="footer-menu-item"><a href="#nav-faq-tab" class="footer-menu-link">FAQs</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Testimonials</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Conditions</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#allconditions" class="footer-menu-link">Acne treatment
+                            </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Depression treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Anxiety treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">All Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-12">
+                    <h5 class="text-white mb-3">Contact Us</h5>
+
+                    <p class="text-white mb-1">Egypt</p>
+
+                    <p><a href="mailto:email@company.com" class="footer-link">Healthcare@outlook.com</a>
+                    <p>
+                </div>
+
+                <div class="site-footer-bottom mt-5">
+                    <div class="row pt-4">
+                        <div class="col-lg-6 col-12">
+                            <p class="copyright-text tooplate-link"> Healthcare Organization </p>
+
+                        </div>
+
+                        <div class="col-lg-3 col-12 ms-auto">
+                            <ul class="social-icon">
+                                <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                                <li><a href="https://twitter.com/search?q=tooplate"
+                                        class="social-icon-link bi-twitter"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <script>     // BACKSTRETCH SLIDESHOW
+        $('#section_1').backstretch([
+            "{% static 'images/slide/Slide1.jpg' %}",
+            "{% static 'images/slide/slide4.jpg' %}",
+            "{% static 'images/slide/slide3.jpg' %}"
+        ], { duration: 2000, fade: 750 });    </script>
+</body>
+
+</html>

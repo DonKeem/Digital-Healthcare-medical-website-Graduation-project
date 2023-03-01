@@ -1,0 +1,331 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Healthcare</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+        rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+
+            <a href="home" class="navbar-brand">
+                <i class="bi-layers"></i> Healthcare
+            </a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_1">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_2">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_3">Sign up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_4">our Fields</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_5">Our Doctors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">log in</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="vision.html">vision</a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12">
+                        <div class="heroText">
+                            <h1 class="text-white mb-lg-5 mb-4">We are here to make Healthcare so much easier</h1>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </section>
+
+
+
+        <section class="Doctors">
+
+
+            <div class="pre-card">
+                <h2 class="pre-card-content">Meet some of our doctors</h2>
+                <p>Can’t find a family doctor? Skip the walk-in clinic and see one in minutes</p>
+            </div>
+
+
+            <div class="wrapper">
+                <div class="box">
+                    <img src="{% static 'images/doctor1.jpg' %}" alt="">
+                    <div class="info">
+                        <a href="doctorprofile.html">
+                            <h2>Dr: Thomas hank</h2>
+                            <p>phd from the university of toronto, in Gynecology</p>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <div class="can-do">
+            <!--heading--->
+            <div class="pre-card">
+                <h2 class="pre-card-content"></h2>
+                <p> </p>
+                <h3>What our Doctors Can do for you</h3>
+                <p> </p>
+            </div>
+
+
+
+
+            <!------Conditions-blogs------->
+            <section id="blog">
+
+
+                <!-------blog-container-->
+                <div class="blog-container">
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/first.jpg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+
+                            <h5>Medical notes</h5>
+                            <p> Doctors can provide sick notes for school or work for short absences.</p>
+
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/medicine.jpg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <h5>Prescriptions</h5>
+                            <p> Doctors can give you a prescription based on your consultation.</p>
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/Bad.jpg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <h5>Medical Advice</h5>
+                            <p> Healthcare connects you with a doctor and help you get the help you need.</p>
+
+                        </div>
+                    </div>
+
+                    <!---box-->
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            <img src="{% static 'images/labwork.jpg' %}">
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <h5>Lab Work</h5>
+                            <p> Doctors on Healthcare can order lab work, such as blood tests.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Services</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">How it works</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Meet our doctors</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Treatable conditions</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">AI Doctor</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Resources</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Testimonials</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Conditions</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Acne treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Depression treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Anxiety treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">All Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-12">
+                    <h5 class="text-white mb-3">Contact Us</h5>
+
+                    <p class="text-white mb-1">Egypt</p>
+
+                    <p><a href="mailto:email@company.com" class="footer-link">Healthcare@outlook.com</a>
+                    <p>
+                </div>
+
+                <div class="site-footer-bottom mt-5">
+                    <div class="row pt-4">
+                        <div class="col-lg-6 col-12">
+                            <p class="copyright-text tooplate-link"> Healthcare Organization </p>
+
+                        </div>
+
+                        <div class="col-lg-3 col-12 ms-auto">
+                            <ul class="social-icon">
+                                <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                                <li><a href="https://twitter.com/search?q=tooplate"
+                                        class="social-icon-link bi-twitter"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+
+
+
+    <script>     // BACKSTRETCH SLIDESHOW
+        $('#section_1').backstretch([
+            "{% static 'images/slide/Slide1.jpg' %}",
+            "{% static 'images/slide/slide4.jpg' %}",
+            "{% static 'images/slide/slide3.jpg' %}"
+        ], { duration: 2000, fade: 750 });    </script>
+
+
+</body>
+
+</html>
