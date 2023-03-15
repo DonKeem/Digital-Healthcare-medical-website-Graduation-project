@@ -2,11 +2,14 @@ from django.urls import path
 
 from . import views
 
+
+app_name = 'health'
+
 urlpatterns = [
-    path('home', views.index, name='index'),
+    path('', views.index, name='index'),
     path('braintumor', views.brain_tumor, name=''),
-    path('ourdoctors', views.our_doctors, name=''),
-    path('doctorsignup', views.doctor_signup, name=''),
-    path('patientsignup', views.patient_signup  , name=''),
-    path('vision', views.vision, name='')
-]
+    path('ourdoctors', views.our_doctors, name='our_doctors'),
+    path('vision', views.vision, name='vision'),
+    path('doctor/<int:doctor_id>/', views.doctor_profile, name='doctor_profile'),
+    path('condition/<int:cond_id>/', views.condition, name='condition')
+    ]

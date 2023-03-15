@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <h4> only takes a minute</h4>
+
+
+      <form action="register" method="post">
+        {% csrf_token %}
+
+        <label>First Name</label>
+        <input type="text" name="first_name" placeholder="Enter first name" />
+        <label>Last Name</label>
+        <input type="text" name="last_name" placeholder=" Enter last name " />
+        <label>Username</label>
+        <input type="text" name="username" placeholder=" Enter username " />
+        <label>Email</label>
+        <input type="email" name="email" placeholder=" Enter email" />
+        <label>Password</label>
+        <input type="password" name="password1" placeholder="password" />
+        <label>Confirm Password</label>
+        <input type="password" name="password2" placeholder="confirm password" />
+        <input type="submit" value="Submit" />
+        
+
+
+      <closeform></closeform></form>
+      {% for message in messages %}
+      <h3>{{message}}</h3>
+      {% endfor %}
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="login.html">Login here</a>
+    </p>
+  </body>
+</html>

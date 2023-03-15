@@ -30,7 +30,6 @@
     <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
 
 
-
 </head>
 
 <body>
@@ -42,7 +41,7 @@
                 <i class="bi-layers"></i> Healthcare
             </a>
 
-            
+
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,33 +58,24 @@
                         <a class="nav-link" href="#section_2">About</a>
                     </li>
 
-                    
-                    {% if user.is_authenticated %}
-
                     <li class="nav-item">
-                        <a class="nav-link" href="ourdoctors">Our Doctors</a>
+                        <a class="nav-link" href="/#section_3">Sign up</a>
                     </li>
-                    {% else %} 
-                    <li class="nav-item">
-                        <a class="nav-link" href="accounts/login">Our Doctors</a>
-                    </li> 
-                    {% endif %}
 
-                    {% if user.is_authenticated %}
-
-                    <li class="nav-item"> <p class="nav-link"> hello {{user.first_name}} </p></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="accounts/logout">logout</a>
+                        <a class="nav-link" href="/#section_4">our Fields</a>
                     </li>
-                    {%else%}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="accounts/login">log in</a>
+                        <a class="nav-link" href="/ourdoctors">Our Doctors</a>
                     </li>
-                    {% endif %}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="vision">vision</a>
+                        <a class="nav-link" href="login.html">log in</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vision">vision</a>
                     </li>
 
                 </ul>
@@ -130,11 +120,9 @@
                                     data-bs-target="#nav-intro" type="button" role="tab" aria-controls="nav-intro"
                                     aria-selected="true">Introduction</button>
 
-                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">Test</button>
-
-                                
+                             
+                                <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab" data-bs-target="#nav-faq"
+                                    type="button" role="tab" aria-controls="nav-faq" aria-selected="false">FAQs</button>
                             </div>
                         </nav>
                     </div>
@@ -145,49 +133,135 @@
                                 aria-labelledby="nav-intro-tab">
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mb-lg-0 mb-4">
-                                        <img src="{% static 'images/BT.jpg' %}" class="img-fluid" alt="">
+                                        <img src="{% static 'images/Humans/Anxiety.jpg' %}" class="img-fluid" alt="">
                                     </div>
 
                                     <div class="col-lg-5 col-12 m-auto">
-                                        <h3 class="mb-3">What is Brain Tumor</h3>
+                                        <h3 class="mb-3">{{desired_condition.name}}</h3>
 
-                                        <p>A brain tumor occurs when abnormal cells form within the brain,There are two main types of tumors: cancerous (malignant) tumors and benign tumors. Cancerous tumors can be divided into primary tumors, which start within the brain, and secondary tumors, which have spread from elsewhere, known as brain metastasis tumors.</p>
+                                        <p>{{desired_condition.first_paragraph}}.</p>
 
-                                        <p>All types of brain tumors may produce symptoms that vary depending on the part of the brain involved,These symptoms may include headaches, seizures, problems with vision, vomiting and mental changes.</p>
+                                        <p>{{desired_condition.second_paragraph}}.</p>
 
-                                        <p></p>
+                                        <p>{{desired_condition.third_paragraph}}.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                aria-labelledby="nav-profile-tab">
+                            <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
                                 <div class="row">
-                                    <div class="col-lg-5 col-12 m-auto">
-                                        <h3 class="mb-3">Brain Tumor AI TEST</h3>
-
-                                        <p>Upload your Brain Scan and AI will take the job for you</p>
-
-
-                                        <form>
-                                            <label>Brain Scan</label>
-                                            <input type="file" id="myFile" name="filename">
-                                            <input type="button" value="Submit" />
-                                        </form>
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/Healthcare.jpg' %}" class="img-fluid" alt="">
                                     </div>
 
-                                    <div class="col-lg-6 col-12 mt-lg-0 mt-4">
-                                        <img src="{% static 'images/BrainTumorTestjpg' %}" class="img-fluid" alt="">
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">Frequenlty Asked Questions</h3>
+
+                                        <div class="accordion" id="accordionGeneral">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne"
+                                                        aria-expanded="true" aria-controls="accordionGeneralOne">
+                                                        {{desired_condition.question_one}}
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">{{desired_condition.answer_one}}</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo"
+                                                        aria-expanded="false" aria-controls="accordionGeneralTwo">
+                                                        {{desired_condition.question_two}}?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">{{desired_condition.answer_two}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#accordionGeneralThree" aria-expanded="false"
+                                                        aria-controls="accordionGeneralThree">
+                                                        {{desired_condition.question_three}}
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">{{desired_condition.answer_three}}.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </section>
+
+        <!------Condition Doctors part-------->
+
+        <section class="Doctors">
+
+
+            <div class="pre-card">
+                <h2 class="pre-card-content">Meet some of our {{desired_condition.field}} doctors</h2>
+                <p>Can’t find a family doctor? Skip the walk-in clinic and see one in minutes</p>
+            </div>
+
+
+
+           
+
+            <div class="wrapper">
+                {% for doctor in condition_doctors %}
+                <div class="box">
+                    <img src="{{doctor.profile_image.url}}" alt="">
+                    <div class="info">
+                        <a href="/doctor/{{doctor.id}}">
+                            <h2>Dr: {{doctor.full_name}}</h2>
+                            <p>{{doctor.brief_information}}</p>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </section>
+
+
+
+
+
+
     </main>
+
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -212,7 +286,7 @@
                     <ul class="footer-menu">
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+                        <li class="footer-menu-item"><a href="#nav-faq-tab" class="footer-menu-link">FAQs</a></li>
 
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Testimonials</a></li>
 
@@ -225,7 +299,8 @@
                     <h5 class="text-white mb-3">Conditions</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Acne treatment </a></li>
+                        <li class="footer-menu-item"><a href="#allconditions" class="footer-menu-link">Acne treatment
+                            </a></li>
 
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Depression treatment </a></li>
 
@@ -284,11 +359,10 @@
 
     <script>     // BACKSTRETCH SLIDESHOW
         $('#section_1').backstretch([
-          "{% static 'images/slide/Slide1.jpg' %}", 
-          "{% static 'images/slide/slide4.jpg' %}",
-          "{% static 'images/slide/slide3.jpg' %}"
-        ],  {duration: 2000, fade: 750});    </script>
-
-
+            "{% static 'images/slide/Slide1.jpg' %}",
+            "{% static 'images/slide/slide4.jpg' %}",
+            "{% static 'images/slide/slide3.jpg' %}"
+        ], { duration: 2000, fade: 750 });    </script>
 </body>
+
 </html>

@@ -1,15 +1,15 @@
 from django.shortcuts import render
-
+from .models import Condition, Doctor
+from django.http import HttpResponse
 # Create your views here.
 
 
-from django.http import HttpResponse
-
-
 def index(request):
-    return render(request, "index.html")
+
+    condition_blogs = Condition.objects.all()
 
 
+    return render(request, "index.html", {'condition_blogs':condition_blogs})
 
 
 
@@ -17,20 +17,33 @@ def brain_tumor(request):
     return render(request, 'BrainTumor.html')
 
 
-
 def our_doctors(request):
-    return render(request, 'ourdoctors.html')
 
+    doctors = Doctor.objects.all()
 
-
-def doctor_signup(request):
-    return render(request, 'doctorssignup.html')
-
-
-def patient_signup(request):
-    return render(request, 'patientssignup.html')
+    return render(request, 'ourdoctors.html', {'doctors': doctors})
 
 
 
 def vision(request):
     return render(request, 'vision.html')
+
+
+def doctor_profile(request,doctor_id):
+
+    desired_doctor = Doctor.objects.get(id = doctor_id)
+
+
+    return render(request, 'doctorprofile.html', {'desired_doctor': desired_doctor})
+
+
+def condition(request,cond_id):
+
+    desired_condition = Condition.objects.get(id = cond_id)
+    condition_field = desired_condition.field
+    condition_doctors = Doctor.objects.filter(field = condition_field )
+    
+    context = {'condition_doctors': condition_doctors, 'desired_condition': desired_condition}
+
+
+    return render(request, 'condition.html', context)

@@ -37,7 +37,7 @@
     <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container">
 
-            <a href="home" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <i class="bi-layers"></i> Healthcare
             </a>
 
@@ -50,33 +50,30 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-lg-5">
+
                     <li class="nav-item">
                         <a class="nav-link" href="#section_1">Home</a>
                     </li>
 
+                
+                    
+                    {% if user.is_authenticated %}
+
+                    <li class="nav-item"> <p class="nav-link"> hello {{user.first_name}} </p></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section_2">About</a>
+                        <a class="nav-link" href="accounts/logout">logout</a>
                     </li>
+                    {%else%}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#section_3">Sign up</a>
+                        <a class="nav-link" href="accounts/login">log in</a>
                     </li>
+                    {% endif %}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#section_4">our Fields</a>
+                        <a class="nav-link" href="vision">vision</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section_5">Our Doctors</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">log in</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="vision.html">vision</a>
-                    </li>
 
                 </ul>
 
@@ -117,15 +114,17 @@
 
 
             <div class="wrapper">
+                {% for doctor in doctors %}
                 <div class="box">
-                    <img src="{% static 'images/doctor1.jpg' %}" alt="">
+                    <img src="{{doctor.profile_image.url}}" alt="">
                     <div class="info">
-                        <a href="doctorprofile.html">
-                            <h2>Dr: Thomas hank</h2>
-                            <p>phd from the university of toronto, in Gynecology</p>
+                        <a href="doctor/{{doctor.id}}">
+                            <h2>Dr: {{doctor.full_name}}</h2>
+                            <p>{{doctor.brief_information}}</p>
                         </a>
                     </div>
                 </div>
+                {% endfor %}
 
 
             </div>

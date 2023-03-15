@@ -37,7 +37,7 @@
     <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container">
 
-            <a href="home" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <i class="bi-layers"></i> Healthcare
             </a>
 
@@ -65,14 +65,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#section_4">our Fields</a>
                     </li>
+                    {% if user.is_authenticated %}
 
                     <li class="nav-item">
                         <a class="nav-link" href="ourdoctors">Our Doctors</a>
                     </li>
+                    {% else %} 
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/login">Our Doctors</a>
+                    </li> 
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+
+                    <li class="nav-item"> <p class="nav-link"> hello {{user.first_name}} </p></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/logout">logout</a>
+                    </li>
+                    {%else%}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="login.html">log in</a>
+                        <a class="nav-link" href="accounts/login">log in</a>
                     </li>
+                    {% endif %}
 
                     <li class="nav-item">
                         <a class="nav-link" href="vision">vision</a>
@@ -307,7 +322,7 @@
 
 
 
-                            <a class="custom-btn custom-bg-dark btn" href="doctorsignup">Sign up</a>
+                            <a class="custom-btn custom-bg-dark btn" href="accounts/doctorregister">Sign up</a>
                         </div>
                     </div>
 
@@ -323,7 +338,7 @@
                             <h4 class="">Patient's Sign up</h4>
 
 
-                            <a class="custom-btn custom-bg-dark btn" href="patientsignup">Sign up</a>
+                            <a class="custom-btn custom-bg-dark btn" href="accounts/register">Sign up</a>
                         </div>
                     </div>
 
@@ -452,7 +467,10 @@
 
                         <!--img-->
                         <div class="blog-img">
+                            {% if user.is_authenticated %}
                             <a href="braintumor"> <img src="{% static 'images/work/brain.jpg' %}"> </a>
+                                {% else  %}
+                                <a href="accounts/login"> <img src="{% static 'images/work/brain.jpg' %}"> </a> {% endif %} 
                         </div>
                         <!---text-->
                         <div class="blog-text">
@@ -488,87 +506,26 @@
                 <div class="blog-container">
 
                     <!---box-->
+                    {% for cond in condition_blogs %}
                     <div class="blog-box">
 
                         <!--img-->
                         <div class="blog-img">
-                            <img src="{% static 'images/Humans/skin.jpeg' %}">
+                            {% if user.is_authenticated %}
+                            <a href="condition/{{cond.id}}"> <img src="{{cond.condition_image.url}}"> </a>
+                            {% else %} <a href="accounts/login"> <img src="{{cond.condition_image.url}}"> </a>
+                            {% endif %}
                         </div>
                         <!---text-->
                         <div class="blog-text">
-                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
-                            <p> lorem ipsum</p>
-                            <a href="#">Read More</a>
+                            <a href="" class="blog-title">{{cond.name}}</a>
+                            <p> {{cond.brief_description}} </p>
+                            <a href="#"></a>
 
                         </div>
                     </div>
+                    {% endfor %}
 
-                    <!---box-->
-                    <div class="blog-box">
-
-                        <!--img-->
-                        <div class="blog-img">
-                            <img src="{% static 'images/Humans/depression.jpeg' %}">
-                        </div>
-                        <!---text-->
-                        <div class="blog-text">
-                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
-                            <p> lorem ipsum</p>
-                            <a href="#">Read More</a>
-
-                        </div>
-                    </div>
-
-                    <!---box-->
-                    <div class="blog-box">
-
-                        <!--img-->
-                        <div class="blog-img">
-                            <img src="{% static 'images/Humans/Anxiety1.jpeg' %}">
-                        </div>
-                        <!---text-->
-                        <div class="blog-text">
-                            <span>blabla</span>
-                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
-                            <p> lorem ipsum</p>
-                            <a href="#">Read More</a>
-
-                        </div>
-                    </div>
-
-                    <!---box-->
-                    <div class="blog-box">
-
-                        <!--img-->
-                        <div class="blog-img">
-                            <img src="{% static 'images/Humans/Anxiety.jpg' %}">
-                        </div>
-                        <!---text-->
-                        <div class="blog-text">
-                            <span>blabla</span>
-                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
-                            <p> lorem ipsum</p>
-                            <a href="#">Read More</a>
-
-                        </div>
-                    </div>
-
-                    <!---box-->
-                    <div class="blog-box">
-
-                        <!--img-->
-                        <div class="blog-img">
-                            <img src="{% static 'images/digital health.jpg' %}">
-                        </div>
-                        <!---text-->
-                        <div class="blog-text">
-                            <span>blabla</span>
-                            <a href="#" class="blog-title">Learn more about the bla bla bla</a>
-                            <p> lorem ipsum</p>
-                            <a href="#">Read More</a>
-
-                        </div>
-                    </div>
 
                 </div>
 
