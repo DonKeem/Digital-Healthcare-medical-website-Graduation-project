@@ -1,0 +1,368 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Healthcare</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+        rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+
+            <a href="/" class="navbar-brand">
+                <i class="bi-layers"></i> Healthcare
+            </a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_1">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_2">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#section_3">Sign up</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#section_4">our Fields</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ourdoctors">Our Doctors</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">log in</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/vision">vision</a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12">
+                        <div class="heroText">
+                            <h1 class="text-white mb-lg-5 mb-4">We are here to make Healthcare so much easier</h1>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </section>
+
+        <section class="about section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-5">Digital Healthcare</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-12 ms-lg-auto mb-5 mb-lg-0">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-intro-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-intro" type="button" role="tab" aria-controls="nav-intro"
+                                    aria-selected="true">Introduction</button>
+
+                             
+                                <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab" data-bs-target="#nav-faq"
+                                    type="button" role="tab" aria-controls="nav-faq" aria-selected="false">FAQs</button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-intro" role="tabpanel"
+                                aria-labelledby="nav-intro-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/Humans/Anxiety.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">{{desired_condition.name}}</h3>
+
+                                        <p>{{desired_condition.first_paragraph}}.</p>
+
+                                        <p>{{desired_condition.second_paragraph}}.</p>
+
+                                        <p>{{desired_condition.third_paragraph}}.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/Healthcare.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">Frequenlty Asked Questions</h3>
+
+                                        <div class="accordion" id="accordionGeneral">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne"
+                                                        aria-expanded="true" aria-controls="accordionGeneralOne">
+                                                        {{desired_condition.question_one}}
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">{{desired_condition.answer_one}}</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo"
+                                                        aria-expanded="false" aria-controls="accordionGeneralTwo">
+                                                        {{desired_condition.question_two}}?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">{{desired_condition.answer_two}}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#accordionGeneralThree" aria-expanded="false"
+                                                        aria-controls="accordionGeneralThree">
+                                                        {{desired_condition.question_three}}
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph">{{desired_condition.answer_three}}.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!------Condition Doctors part-------->
+
+        <section class="Doctors">
+
+
+            <div class="pre-card">
+                <h2 class="pre-card-content">Meet some of our {{desired_condition.field}} doctors</h2>
+                <p>Can’t find a family doctor? Skip the walk-in clinic and see one in minutes</p>
+            </div>
+
+
+
+           
+
+            <div class="wrapper">
+                {% for doctor in condition_doctors %}
+                <div class="box">
+                    <img src="{{doctor.profile_image.url}}" alt="">
+                    <div class="info">
+                        <a href="/doctor/{{doctor.id}}">
+                            <h2>Dr: {{doctor.full_name}}</h2>
+                            <p>{{doctor.brief_information}}</p>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </section>
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Services</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">How it works</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Meet our doctors</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Treatable conditions</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">AI Doctor</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Resources</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
+
+                        <li class="footer-menu-item"><a href="#nav-faq-tab" class="footer-menu-link">FAQs</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Testimonials</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+                    <h5 class="text-white mb-3">Conditions</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#allconditions" class="footer-menu-link">Acne treatment
+                            </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Depression treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Anxiety treatment </a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">All Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-12">
+                    <h5 class="text-white mb-3">Contact Us</h5>
+
+                    <p class="text-white mb-1">Egypt</p>
+
+                    <p><a href="mailto:email@company.com" class="footer-link">Healthcare@outlook.com</a>
+                    <p>
+                </div>
+
+                <div class="site-footer-bottom mt-5">
+                    <div class="row pt-4">
+                        <div class="col-lg-6 col-12">
+                            <p class="copyright-text tooplate-link"> Healthcare Organization </p>
+
+                        </div>
+
+                        <div class="col-lg-3 col-12 ms-auto">
+                            <ul class="social-icon">
+                                <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                                <li><a href="https://twitter.com/search?q=tooplate"
+                                        class="social-icon-link bi-twitter"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
+
+                                <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <script>     // BACKSTRETCH SLIDESHOW
+        $('#section_1').backstretch([
+            "{% static 'images/slide/Slide1.jpg' %}",
+            "{% static 'images/slide/slide4.jpg' %}",
+            "{% static 'images/slide/slide3.jpg' %}"
+        ], { duration: 2000, fade: 750 });    </script>
+</body>
+
+</html>
