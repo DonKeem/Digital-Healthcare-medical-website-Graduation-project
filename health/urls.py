@@ -7,7 +7,7 @@ app_name = 'health'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('braintumor', views.brain_tumor, name=''),
+    path('braintumor/', views.brain_tumor, name='braintumor'),
     path('ourdoctors', views.our_doctors, name='our_doctors'),
     path('vision', views.vision, name='vision'),
     path('doctor/<int:doctor_id>/', views.doctor_profile, name='doctor_profile'),
