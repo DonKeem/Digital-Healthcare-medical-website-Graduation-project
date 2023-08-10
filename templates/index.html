@@ -62,6 +62,7 @@
                         <a class="nav-link" href="#section_3">Sign up</a>
                     </li>
 
+
                     <li class="nav-item">
                         <a class="nav-link" href="#section_4">our Fields</a>
                     </li>
@@ -74,24 +75,29 @@
                     <li class="nav-item">
                         <a class="nav-link" href="accounts/login">Our Doctors</a>
                     </li> 
+                    
                     {% endif %}
 
                     {% if user.is_authenticated %}
 
-                    <li class="nav-item"> <p class="nav-link"> hello {{user.first_name}} </p></li>
+                    <li class="nav-item"> <p class="nav-link"> hello {{user.username}} </p></li>
                     <li class="nav-item">
                         <a class="nav-link" href="accounts/logout">logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chat">chat</a>
                     </li>
                     {%else%}
 
                     <li class="nav-item">
                         <a class="nav-link" href="accounts/login">log in</a>
                     </li>
+
+                    
+
                     {% endif %}
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="vision">vision</a>
-                    </li>
+                    
 
                 </ul>
 
@@ -318,11 +324,10 @@
 
                         <div class="services-info custom-icon-right paddingText order-lg-0 order-sm-2">
 
-                            <h4 class="">Doctor's Sign up</h4>
+                            
 
 
 
-                            <a class="custom-btn custom-bg-dark btn" href="accounts/doctorregister">Sign up</a>
                         </div>
                     </div>
 

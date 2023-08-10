@@ -5,8 +5,7 @@ from django.contrib import auth
 # Create your views here.
 
 def register(request):
-
-
+    
     if request.method == 'POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']

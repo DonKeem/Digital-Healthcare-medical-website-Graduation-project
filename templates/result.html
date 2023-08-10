@@ -8,10 +8,107 @@
     <link href="{% static 'scan-result/css/all.css' %}" rel="stylesheet">
     <link href="{% static 'scan-result/css/bootstrap.min.css' %}" rel="stylesheet" />
     <link href="{% static 'scan-result/css/style.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+        rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
 
 
 </head>
 <body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+
+            <a href="/" class="navbar-brand">
+                <i class="bi-layers"></i> Healthcare
+            </a>
+
+            
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_1">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_2">About</a>
+                    </li>
+
+                    
+                    {% if user.is_authenticated %}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ourdoctors">Our Doctors</a>
+                    </li>
+                    {% else %} 
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/login">Our Doctors</a>
+                    </li> 
+                    {% endif %}
+
+                    {% if user.is_authenticated %}
+
+                    <li class="nav-item"> <p class="nav-link"> hello {{user.username}}</p></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/logout">logout</a>
+                    </li>
+                    {%else%}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/login">log in</a>
+                    </li>
+                    {% endif %}
+
+                    
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12">
+                        <div class="heroText">
+                            <h1 class="text-white mb-lg-5 mb-4">We are here to make Healthcare so much easier</h1>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="overlay"></div>
+        </section>
+
+
+
+
+
     <div class="sec1">
         <div class="container">
             <div class="bold-part row align-items-center bg-white bg-bgs">
@@ -19,7 +116,7 @@
                 <p class="text-center sec-words">{{ prediction }}</p>
                 <div class="text-center btn-back">
                     <!-- <input class="sub-button btn btn-dark"  type="submit" value="Repeat The Test "> -->
-                    <a class="btn-1" href="/BrainTumor">Repeat The Test</a>
+                    <a class="btn-1" href="/braintumor"> <b>Repeat The Test</b></a>
                 </div>
     
     
@@ -29,6 +126,25 @@
         </div>
 
     </div>
+
+    
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'js/click-scroll.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <script>     // BACKSTRETCH SLIDESHOW
+        $('#section_1').backstretch([
+            "{% static 'images/slide/Slide1.jpg' %}",
+            "{% static 'images/slide/slide4.jpg' %}",
+            "{% static 'images/slide/slide3.jpg' %}"
+        ], { duration: 2000, fade: 750 });    </script>
 
 </body>
 </html>
