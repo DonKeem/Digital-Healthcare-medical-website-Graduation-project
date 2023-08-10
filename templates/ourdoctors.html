@@ -59,7 +59,7 @@
                     
                     {% if user.is_authenticated %}
 
-                    <li class="nav-item"> <p class="nav-link"> hello {{user.first_name}} </p></li>
+                    <li class="nav-item"> <p class="nav-link"> hello {{user.username}} </p></li>
                     <li class="nav-item">
                         <a class="nav-link" href="accounts/logout">logout</a>
                     </li>
@@ -70,9 +70,7 @@
                     </li>
                     {% endif %}
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="vision">vision</a>
-                    </li>
+                    
 
 
                 </ul>
