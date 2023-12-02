@@ -1,36 +1,82 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>Login </title>
-    <link rel="stylesheet" href="{% static 'css/style1.css' %}" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="login-box">
-      <h1>Login</h1>
-      <form action="login" method="post">
+  	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        {% csrf_token %}
+	<!--font links-->
 
-        <label>Username</label>
-        <input type="text" name="username" placeholder="Enter username" />
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Enter password" />
-        <input type="submit" value="Submit" />
-        {% for message in messages %}
-         <h3>{{message}}</h3>
-        {% endfor %}
-      <closeform></closeform></form>
-    </div>
-    <p class="para-2">
-      Not have an account? <a href="signup.html">Sign Up Here</a>
-      
-    </p>
-    
-  </body>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	
+	<!--CSS and Bootstrap links-->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url('/static/images/signform.jpg');">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">
+						<h2 class="heading-section"> 
+							<a href="/" class="navbar-brand">
+								<i class="bi-layers"></i> Healthcare
+							</a>
+				
+						</h2>
+					</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center">Log in</h3>
+		      	<form action="login" method="post" class="signin-form">
+              {% csrf_token %}
+
+              <div class="form-group">
+		      			<input type="text" name="username" class="form-control" placeholder="Username" required>
+		      		</div>
+
+	            <div class="form-group">
+	              <input id="password-field" type="password" name="password" class="form-control" placeholder="Password" required>
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+  
+	            <div class="form-group">
+	            	<button type="submit" value="submit" class="form-control btn btn-primary submit px-3">Log In</button>
+	            </div>
+	          </form>
+	         <p>&mdash; not have an account  &mdash;</p>
+	          <div class="social d-flex text-center">
+	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Sign up</a>
+	          </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+	</body>
 </html>
-

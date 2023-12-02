@@ -45,3 +45,4 @@ class Condition(models.Model):
         return self.name
     
     
+
