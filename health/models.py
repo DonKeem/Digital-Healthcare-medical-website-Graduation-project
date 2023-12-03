@@ -46,3 +46,14 @@ class Condition(models.Model):
     
     
 
+class Booking(models.Model):
+    email= models.EmailField(max_length=100)
+    patient_first_name= models.CharField(max_length=30)
+    patient_last_name= models.CharField(max_length=30)
+    age = models.IntegerField()
+    speciality_field = models.CharField(max_length=30)
+    condition_field = models.CharField(max_length=30)
+
+
+    def __str__(self):
+        return self.condition_field

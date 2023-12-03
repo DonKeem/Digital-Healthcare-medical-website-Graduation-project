@@ -1,0 +1,137 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!--font links-->
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	
+	<!--CSS and Bootstrap links-->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	</head>
+	<body class="img js-fullheight" style="background-image: url('/static/images/signform.jpg');" >
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"> 
+						<a href="/" class="navbar-brand">
+							<i class="bi-layers"></i> Healthcare
+						</a>
+			
+					</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center"> Doctor Appointment Request </h3>
+		      	<form action="register" method="post" class="signin-form">
+              {% csrf_token %}
+
+            <div class="form-group">
+                <input type="text" name="patient_first_name" class="form-control" placeholder="patient's first name" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="patient_last_name" class="form-control" placeholder="patient's last name" required>
+            </div>
+
+            <div class="form-group">
+                
+                <input  name="age" class="form-control" placeholder="Enter patient's age" required>
+            </div>
+
+	
+            <div class="form-group">
+            <label for="speciality_field"></label>
+            <select name="speciality_field" id="condition-field" class="form-control" required>
+                <option value="" disabled selected>Select the speciality</option>
+                <option value="option1">General Health Assessment</option>
+                <option value="option2">Dermatology</option>
+                <option value="option3">Mental Health Therapist</option>
+                <option value="option4">Naturopathy</option>
+                <option value="option5">Endocrinologist</option>
+                <option value="option6">Diet and Nutrition</option>
+                <option value="option7">Allergy and Immunology</option>
+                <option value="option8">Other</option>
+
+            </select>
+            </div>
+
+            <div class="form-group">
+            <label for="condition_field"></label>
+            <select name="condition_field" id="condition-field" class="form-control" required>
+                <option value="" disabled selected>Select the condition</option>
+                <option value="option1">Routine health check-ups</option>
+                <option value="option2">General Wellness advice</option>
+                <option value="option3">Acne</option>
+                <option value="option4">Eczema</option>
+                <option value="option5">Skin Disorder</option>
+                <option value="option6">Anxiety</option>
+                <option value="option7">Depression</option>
+                <option value="option8">Herbal medicine</option>
+                <option value="option9">Nutritional counseling</option>
+                <option value="option10">Hormonal Disorder</option>
+                <option value="option11">Diabetes</option>
+                <option value="option12">Dietary Management</option>
+                <option value="option13">Allergies</option>
+                <option value="option14">Other</option>
+
+    
+            </select>
+            </div>
+
+
+        
+              
+	            <div class="form-group">
+	            	<button type="submit" value="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+	            </div>
+	          </form>
+	          
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
+
+
+<!--<div class="form-group">
+    <label for="condition-field">Choose the field:</label>
+    <select name="condition-field" id="condition-field" class="form-control" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <! Add more options as needed -->
+    
+<!--</select>
+</div>-->

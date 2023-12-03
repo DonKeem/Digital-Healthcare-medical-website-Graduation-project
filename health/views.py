@@ -47,3 +47,8 @@ def condition(request,cond_id):
 
 
     return render(request, 'condition.html', context)
+
+
+
+def booking(request):
+    return render(request, 'bookingform.html')
