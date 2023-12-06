@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from health.models import Condition, Doctor
 from django.http import HttpResponse
+from .forms import BookingForm
 
 
 
@@ -51,4 +52,18 @@ def condition(request,cond_id):
 
 
 def booking(request):
-    return render(request, 'bookingform.html')
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = BookingForm(request.POST)
+            if form.is_valid():
+                # Save the booking object to the database
+                booking = form.save(commit=False)
+                booking.email = request.user.email
+                booking.save()
+                return redirect('/')  # Redirect to a success page
+        else:
+            form = BookingForm()
+
+        return render(request, 'bookingform.html', {'form': form})
+    else:
+        return redirect('accounts/login')  # Redirect to the login page if the user is not authenticated

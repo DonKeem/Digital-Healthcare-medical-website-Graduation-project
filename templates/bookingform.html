@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 	</head>
-	<body class="img js-fullheight" style="background-image: url('/static/images/signform.jpg');" >
+	<body class="img js-fullheight" style="background-image: url('/static/images/signform.jpg');"  >
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -45,7 +45,7 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center"> Doctor Appointment Request </h3>
-		      	<form action="register" method="post" class="signin-form">
+		      	<form action="booking" method="post" class="signin-form">
               {% csrf_token %}
 
             <div class="form-group">
@@ -66,14 +66,14 @@
             <label for="speciality_field"></label>
             <select name="speciality_field" id="condition-field" class="form-control" required>
                 <option value="" disabled selected>Select the speciality</option>
-                <option value="option1">General Health Assessment</option>
-                <option value="option2">Dermatology</option>
-                <option value="option3">Mental Health Therapist</option>
-                <option value="option4">Naturopathy</option>
-                <option value="option5">Endocrinologist</option>
-                <option value="option6">Diet and Nutrition</option>
-                <option value="option7">Allergy and Immunology</option>
-                <option value="option8">Other</option>
+                <option value="General Health Assessment">General Health Assessment</option>
+                <option value="Dermatology">Dermatology</option>
+                <option value="Mental Health Therapist">Mental Health Therapist</option>
+                <option value="Naturopathy">Naturopathy</option>
+                <option value="Endocrinologist">Endocrinologist</option>
+                <option value="Diet and Nutrition">Diet and Nutrition</option>
+                <option value="Allergy and Immunology">Allergy and Immunology</option>
+                <option value="other">Other</option>
 
             </select>
             </div>
@@ -82,20 +82,20 @@
             <label for="condition_field"></label>
             <select name="condition_field" id="condition-field" class="form-control" required>
                 <option value="" disabled selected>Select the condition</option>
-                <option value="option1">Routine health check-ups</option>
-                <option value="option2">General Wellness advice</option>
-                <option value="option3">Acne</option>
-                <option value="option4">Eczema</option>
-                <option value="option5">Skin Disorder</option>
-                <option value="option6">Anxiety</option>
-                <option value="option7">Depression</option>
-                <option value="option8">Herbal medicine</option>
-                <option value="option9">Nutritional counseling</option>
-                <option value="option10">Hormonal Disorder</option>
-                <option value="option11">Diabetes</option>
-                <option value="option12">Dietary Management</option>
-                <option value="option13">Allergies</option>
-                <option value="option14">Other</option>
+                <option value="Routine health check-ups">Routine health check-ups</option>
+                <option value="General Wellness advice">General Wellness advice</option>
+                <option value="Acne">Acne</option>
+                <option value="Eczema">Eczema</option>
+                <option value="Skin Disorder">Skin Disorder</option>
+                <option value="Anxiety">Anxiety</option>
+                <option value="Depression">Depression</option>
+                <option value="Herbal medicine">Herbal medicine</option>
+                <option value="Nutritional counseling">Nutritional counseling</option>
+                <option value="Hormonal Disorder">Hormonal Disorder</option>
+                <option value="Diabetes">Diabetes</option>
+                <option value="Dietary Management">Dietary Management</option>
+                <option value="Allergies">Allergies</option>
+                <option value="Other">Other</option>
 
     
             </select>
@@ -105,7 +105,7 @@
         
               
 	            <div class="form-group">
-	            	<button type="submit" value="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+	            	<button type="submit" value="submit" class="form-control btn btn-primary submit px-3">Submit</button>
 	            </div>
 	          </form>
 	          
@@ -123,15 +123,3 @@
 	</body>
 </html>
 
-
-<!--<div class="form-group">
-    <label for="condition-field">Choose the field:</label>
-    <select name="condition-field" id="condition-field" class="form-control" required>
-        <option value="" disabled selected>Select an option</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-        <! Add more options as needed -->
-    
-<!--</select>
-</div>-->
