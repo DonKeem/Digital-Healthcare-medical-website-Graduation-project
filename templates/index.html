@@ -1,4 +1,5 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Healthcare</title>
+    <title>Shefaa</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +39,7 @@
         <div class="container">
 
             <a href="/" class="navbar-brand">
-                <i class="bi-layers"></i> Healthcare
+                <i class="bi-layers"></i> Shefaa
             </a>
 
 
@@ -54,9 +55,6 @@
                         <a class="nav-link" href="#section_1">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#section_2">About</a>
-                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="#section_3">Sign up</a>
@@ -64,17 +62,22 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#section_4">our Fields</a>
+                        <a class="nav-link" href="#section_4">Specialities</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section_2">About</a>
+                    </li>
+
                     {% if user.is_authenticated %}
 
                     <li class="nav-item">
-                        <a class="nav-link" href="ourdoctors">Our Doctors</a>
+                        <a class="nav-link" href="ourdoctors"> Doctors</a>
                     </li>
                     {% else %} 
                     <li class="nav-item">
-                        <a class="nav-link" href="accounts/login">Our Doctors</a>
-                    </li> 
+                        <a class="nav-link" href="accounts/login"> Doctors</a>
+                    </li>
                     
                     {% endif %}
 
@@ -126,172 +129,7 @@
             <div class="overlay"></div>
         </section>
 
-        <section class="about section-padding" id="section_2">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <h2 class="mb-5">Digital Healthcare</h2>
-                    </div>
-
-                    <div class="col-lg-4 col-12 ms-lg-auto mb-5 mb-lg-0">
-                        <nav>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button class="nav-link active" id="nav-intro-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-intro" type="button" role="tab" aria-controls="nav-intro"
-                                    aria-selected="true">Introduction</button>
-
-                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
-                                    aria-selected="false">About us</button>
-
-                                <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab" data-bs-target="#nav-faq"
-                                    type="button" role="tab" aria-controls="nav-faq" aria-selected="false">FAQs</button>
-                            </div>
-                        </nav>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-intro" role="tabpanel"
-                                aria-labelledby="nav-intro-tab">
-                                <div class="row">
-                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
-                                        <img src="{% static 'images/WDH1.jpg' %}" class="img-fluid" alt="">
-                                    </div>
-
-                                    <div class="col-lg-5 col-12 m-auto">
-                                        <h3 class="mb-3">What does Healthcare provide</h3>
-
-                                        <p>Healthcare is a wonderful medicine website which allows patients from all
-                                            over the world to get in touch with doctors easily.</p>
-
-                                        <p>if you don't have a doctor in your area or you want Healthcare from the
-                                            comfort of your home, Healthcare will take care of that, with our
-                                            professional doctors you will feel much better.</p>
-
-                                        <p>We dream of having a healthy world where all humans can check about their
-                                            health no matter where they area, and with the technologoy we have today we
-                                            believe we can make this dream come true.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                aria-labelledby="nav-profile-tab">
-                                <div class="row">
-                                    <div class="col-lg-5 col-12 m-auto">
-                                        <h3 class="mb-3">Healthcare Family</h3>
-
-                                        <p>We are proud to be working in healthcare, we dream of having a world with no
-                                            illness, that is what we stand for, what Healthcare stands for.</p>
-
-                                        <ul class="social-icon mt-lg-5 mt-3">
-                                            <li class="me-3"><strong>Where to find?</strong></li>
-
-                                            <li><a href="https://twitter.com/search?q=tooplate"
-                                                    class="social-icon-link bi-twitter"></a></li>
-
-                                            <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
-
-                                            <li><a href="#" class="social-icon-link bi-envelope"></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="col-lg-6 col-12 mt-lg-0 mt-4">
-                                        <img src="{% static 'images/slide/slide2.jpg' %}" class="img-fluid" alt="">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
-                                <div class="row">
-                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
-                                        <img src="{% static 'images/Healthcare.jpg' %}" class="img-fluid" alt="">
-                                    </div>
-
-                                    <div class="col-lg-5 col-12 m-auto">
-                                        <h3 class="mb-3">Frequenlty Asked Questions</h3>
-
-                                        <div class="accordion" id="accordionGeneral">
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingOne">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne"
-                                                        aria-expanded="true" aria-controls="accordionGeneralOne">
-                                                        how does it work?
-                                                    </button>
-                                                </h2>
-
-                                                <div id="accordionGeneralOne" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
-
-                                                    <div class="accordion-body">
-                                                        <p class="large-paragraph"><strong>Healthcare</strong> helps
-                                                            patients find doctors more easily and from the comfort of
-                                                            home, we provide treatment for many illnesses including
-                                                            dermatologists, endocrinologists, mental health therapists,
-                                                            gynecologists, and more.</p>
-
-                                                        <p class="large-paragraph">Check our doctors and contact the
-                                                            doctor that you prefer, all doctors are proven to be the
-                                                            best in their fields.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingTwo">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo"
-                                                        aria-expanded="false" aria-controls="accordionGeneralTwo">
-                                                        What are available services?
-                                                    </button>
-                                                </h2>
-
-                                                <div id="accordionGeneralTwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
-
-                                                    <div class="accordion-body">
-                                                        <p class="large-paragraph">Sign up with Healthcare and become a
-                                                            member of our big family and gain access to all our
-                                                            services,</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h2 class="accordion-header" id="headingThree">
-                                                    <button class="accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse"
-                                                        data-bs-target="#accordionGeneralThree" aria-expanded="false"
-                                                        aria-controls="accordionGeneralThree">
-                                                        Why Healthcare?
-                                                    </button>
-                                                </h2>
-
-                                                <div id="accordionGeneralThree" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
-
-                                                    <div class="accordion-body">
-                                                        <p class="large-paragraph">a healthy body leads to healthy life,
-                                                            that's why healthcare is essential to all, specially with
-                                                            services we provide, healthcare is now easy and cheap.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
+        
         <section class="services section-padding" id="section_3">
             <div class="container">
                 <div class="row">
@@ -306,10 +144,13 @@
                     <div class="col-lg-4 col-12 p-0">
                         <div class="services-info custom-icon-left paddingText">
 
-                            <h4 class="">sign up with healthcare </h4>
+                            <h4 class="">sign up with Shefaa </h4>
 
-                            <p class="mb-4">become a member in our big family, and if you are a doctor and care to join
+                            <p class="mb-4" style="color: black;">become a member in our big family, and if you are a doctor and care to join
                                 us, our doors are always open.</p>
+
+                                <a class="custom-btn custom-bg-dark btn" href="accounts/register">Sign up</a>
+
 
 
                         </div>
@@ -340,10 +181,7 @@
 
                         <div class="services-info custom-icon-top paddingText">
 
-                            <h4 class="">Patient's Sign up</h4>
-
-
-                            <a class="custom-btn custom-bg-dark btn" href="accounts/register">Sign up</a>
+                            
                         </div>
                     </div>
 
@@ -445,53 +283,6 @@
         </section>
 
 
-
-        <!-----AI DOCTOR------->
-
-
-        <div class="AI-Section">
-
-            <!------Conditions-blogs------->
-            <section id="blog">
-
-                <!--heading--->
-                <div class="blog-heading">
-
-
-                    <h3>AI Tests.</h3>
-                    <p>With the technologoy we have today, we can use it to check about serious illnesses easily and
-                        free of charge.</p>
-                    <p>With time and effort we will be able to provide more AI Tests in the near future.</p>
-                </div>
-
-                <!-------blog-container-->
-                <div class="blog-container">
-
-                    <!---box-->
-                    <div class="blog-box">
-
-                        <!--img-->
-                        <div class="blog-img">
-                            {% if user.is_authenticated %}
-                            <a href="braintumor"> <img src="{% static 'images/work/brain.jpg' %}"> </a>
-                                {% else  %}
-                                <a href="accounts/login"> <img src="{% static 'images/work/brain.jpg' %}"> </a> {% endif %} 
-                        </div>
-                        <!---text-->
-                        <div class="blog-text">
-                            <a href="braintumor" class="blog-title">Brain Tumor AI Test</a>
-                            <p> With the help of AI and Big Data, Serious illnesses like Brain Tumor can be checked
-                                easily, which will help lots of people to check about themselves easily.</p>
-                            <a href="#">Read More</a>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-
-
         <div class="Conditions">
 
             <!------Conditions-blogs------->
@@ -502,7 +293,7 @@
 
 
                     <h3>Doctors can treat many common conditions online.</h3>
-                    <p>Our online doctors in Canada can treat many conditions without you ever having to leave home.</p>
+                    <p>Our online doctors in Shefaa can treat many conditions without you ever having to leave home.</p>
                     <p> You can also book a doctor’s appointment with specialists, including dermatologists,
                         endocrinologists, mental health therapists, gynecologists, and more. See a doctor today.</p>
                 </div>
@@ -538,6 +329,174 @@
 
         </div>
 
+
+
+        <section class="about section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-5">Digital Healthcare</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-12 ms-lg-auto mb-5 mb-lg-0">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-intro-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-intro" type="button" role="tab" aria-controls="nav-intro"
+                                    aria-selected="true">Introduction</button>
+
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">About us</button>
+
+                                <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab" data-bs-target="#nav-faq"
+                                    type="button" role="tab" aria-controls="nav-faq" aria-selected="false">FAQs</button>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-intro" role="tabpanel"
+                                aria-labelledby="nav-intro-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/WDH1.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">What does Shefaa provide</h3>
+
+                                        <p style="color: black;">Shefaa is a wonderful medicine website which allows patients from all
+                                            over the world to get in touch with doctors easily.</p>
+
+                                        <p style="color: black;">if you don't have a doctor in your area or you want Healthcare from the
+                                            comfort of your home, Shefaa will take care of that, with our
+                                            professional doctors you will feel much better.</p>
+
+                                        <p style="color: black;">We dream of having a healthy world where all humans can check about their
+                                            health no matter where they area, and with the technologoy we have today we
+                                            believe we can make this dream come true.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">Shefaa Family</h3>
+
+                                        <p style="color: black;">We are proud to be working in healthcare, we dream of having a world with no
+                                            illness, that is what we stand for, what Shefaa stands for.</p>
+
+                                        <ul class="social-icon mt-lg-5 mt-3">
+                                            <li class="me-3"><strong>Where to find?</strong></li>
+
+                                            <li><a href="https://twitter.com/search?q=tooplate"
+                                                    class="social-icon-link bi-twitter"></a></li>
+
+                                            <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
+
+                                            <li><a href="#" class="social-icon-link bi-envelope"></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12 mt-lg-0 mt-4">
+                                        <img src="{% static 'images/slide/slide2.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-faq" role="tabpanel" aria-labelledby="nav-faq-tab">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-4">
+                                        <img src="{% static 'images/Healthcare.jpg' %}" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="col-lg-5 col-12 m-auto">
+                                        <h3 class="mb-3">Frequenlty Asked Questions</h3>
+
+                                        <div class="accordion" id="accordionGeneral">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne"
+                                                        aria-expanded="true" aria-controls="accordionGeneralOne">
+                                                        how does it work?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralOne" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph" style="color: black;"><strong>Shefaa</strong> helps
+                                                            patients find doctors more easily and from the comfort of
+                                                            home, we provide treatment for many illnesses including
+                                                            dermatologists, endocrinologists, mental health therapists,
+                                                            gynecologists, and more.</p>
+
+                                                        <p class="large-paragraph">Check our doctors and contact the
+                                                            doctor that you prefer, all doctors are proven to be the
+                                                            best in their fields.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo"
+                                                        aria-expanded="false" aria-controls="accordionGeneralTwo">
+                                                        What are available services?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph" style="color: black;">Welcome to our user-friendly website, where you can seamlessly access a variety of healthcare services. Easily book appointments online to consult with doctors and manage your health information effortlessly. Experience hassle-free account management with simple sign-up, log-in, and log-out features, ensuring a secure and user-friendly experience. Stay connected with healthcare professionals through our intuitive chat feature, providing real-time assistance and support without the need for technical expertise.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#accordionGeneralThree" aria-expanded="false"
+                                                        aria-controls="accordionGeneralThree">
+                                                        Why Healthcare?
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionGeneralThree" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+
+                                                    <div class="accordion-body">
+                                                        <p class="large-paragraph" style="color: black;">a healthy body leads to healthy life,
+                                                            that's why healthcare is essential to all, specially with
+                                                            services we provide, healthcare is now easy and cheap.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
     </main>
 
     <footer class="site-footer">
@@ -548,13 +507,12 @@
                     <h5 class="text-white mb-3">Services</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">How it works</a></li>
+                        <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">How it works</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Meet our doctors</a></li>
+                        <li class="footer-menu-item"><a href="ourdoctors" class="footer-menu-link">Meet our doctors</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Treatable conditions</a></li>
+                        <li class="footer-menu-item"><a href="#blog" class="footer-menu-link">Treatable conditions</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">AI Doctor</a></li>
                     </ul>
                 </div>
 
@@ -562,13 +520,17 @@
                     <h5 class="text-white mb-3">Resources</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
-
+                        <li class="footer-menu-item"><a href="ourdoctors#blog" class="footer-menu-link">Blog</a></li>
                         <li class="footer-menu-item"><a href="#nav-faq-tab" class="footer-menu-link">FAQs</a></li>
 
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Testimonials</a></li>
+                        {% if user.is_authenticated %}
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact us</a></li>
+                        <li class="footer-menu-item"><a href="booking" class="footer-menu-link">Contact us</a></li>
+                        {% else %}
+                        <li class="footer-menu-item"><a href="accounts/register" class="footer-menu-link">Contact us</a></li>
+                        {% endif %}
+
                     </ul>
                 </div>
 
@@ -584,23 +546,24 @@
 
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Anxiety treatment </a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">All Conditions</a></li>
+                        <li class="footer-menu-item"><a href="#blog" class="footer-menu-link">All Conditions</a></li>
                     </ul>
                 </div>
+                
 
                 <div class="col-lg-2 col-12">
                     <h5 class="text-white mb-3">Contact Us</h5>
 
                     <p class="text-white mb-1">Egypt</p>
 
-                    <p><a href="mailto:email@company.com" class="footer-link">Healthcare@outlook.com</a>
+                    <p><a href="mailto:email@company.com" class="footer-link">Shefaa@outlook.com</a>
                     <p>
                 </div>
 
                 <div class="site-footer-bottom mt-5">
                     <div class="row pt-4">
                         <div class="col-lg-6 col-12">
-                            <p class="copyright-text tooplate-link"> Healthcare Organization </p>
+                            <p class="copyright-text tooplate-link"> Shefaa Organization </p>
 
                         </div>
 

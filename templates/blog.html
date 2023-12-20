@@ -100,7 +100,7 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <h2 class="mb-5">Digital Healthcare</h2>
+                        <h2 class="mb-5">{{desired_blog.name}}</h2>
                     </div>
 
                     <div class="col-lg-4 col-12 ms-lg-auto mb-5 mb-lg-0">
@@ -123,17 +123,17 @@
                                 aria-labelledby="nav-intro-tab">
                                 <div class="row">
                                     <div class="col-lg-6 col-12 mb-lg-0 mb-4">
-                                        <img src="{% static 'images/Humans/Anxiety.jpg' %}" class="img-fluid" alt="">
+                                        <img src="{{desired_blog.blog_image.url}}" class="img-fluid" alt="">
                                     </div>
 
                                     <div class="col-lg-5 col-12 m-auto">
-                                        <h3 class="mb-3">{{desired_condition.name}}</h3>
+                                        
 
-                                        <p>{{desired_condition.first_paragraph}}.</p>
+                                        <p  style="color: black;">{{desired_blog.first_paragraph}}.</p>
 
-                                        <p>{{desired_condition.second_paragraph}}.</p>
+                                        <p  style="color: black;">{{desired_blog.second_paragraph}}.</p>
 
-                                        <p>{{desired_condition.third_paragraph}}.</p>
+                                        <p  style="color: black;">{{desired_blog.third_paragraph}}.</p>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +153,7 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne"
                                                         aria-expanded="true" aria-controls="accordionGeneralOne">
-                                                        {{desired_condition.question_one}}
+                                                        {{desired_blog.question_one}}
                                                     </button>
                                                 </h2>
 
@@ -161,7 +161,7 @@
                                                     aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
 
                                                     <div class="accordion-body">
-                                                        <p class="large-paragraph">{{desired_condition.answer_one}}</p>
+                                                        <p class="large-paragraph"  style="color: black;">{{desired_blog.answer_one}}</p>
 
                                                     </div>
                                                 </div>
@@ -172,7 +172,7 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo"
                                                         aria-expanded="false" aria-controls="accordionGeneralTwo">
-                                                        {{desired_condition.question_two}}?
+                                                        {{desired_blog.question_two}}?
                                                     </button>
                                                 </h2>
 
@@ -180,7 +180,7 @@
                                                     aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
 
                                                     <div class="accordion-body">
-                                                        <p class="large-paragraph">{{desired_condition.answer_two}}</p>
+                                                        <p class="large-paragraph"  style="color: black;">{{desired_blog.answer_two}}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -191,7 +191,7 @@
                                                         data-bs-toggle="collapse"
                                                         data-bs-target="#accordionGeneralThree" aria-expanded="false"
                                                         aria-controls="accordionGeneralThree">
-                                                        {{desired_condition.question_three}}
+                                                        {{desired_blog.question_three}}
                                                     </button>
                                                 </h2>
 
@@ -199,7 +199,7 @@
                                                     aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
 
                                                     <div class="accordion-body">
-                                                        <p class="large-paragraph">{{desired_condition.answer_three}}.</p>
+                                                        <p class="large-paragraph"  style="color: black;">{{desired_blog.answer_three}}.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -271,7 +271,7 @@
                     <ul class="footer-menu">
                         <li class="footer-menu-item"><a href="/#section_2" class="footer-menu-link">How it works</a></li>
 
-                        <li class="footer-menu-item"><a href="ourdoctors" class="footer-menu-link">Meet our doctors</a></li>
+                        <li class="footer-menu-item"><a href="/ourdoctors" class="footer-menu-link">Meet our doctors</a></li>
 
                         <li class="footer-menu-item"><a href="/#blog" class="footer-menu-link">Treatable conditions</a></li>
 

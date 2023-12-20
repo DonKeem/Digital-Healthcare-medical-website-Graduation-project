@@ -9,6 +9,7 @@ User = get_user_model()
 
 
 class ChatConsumer(AsyncConsumer):
+    
     async def websocket_connect(self, event):
         print('connected', event)
         user = self.scope['user']

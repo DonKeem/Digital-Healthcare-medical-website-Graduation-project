@@ -38,7 +38,7 @@
         <div class="container">
 
             <a href="/" class="navbar-brand">
-                <i class="bi-layers"></i> Healthcare
+                <i class="bi-layers"></i> Shefaa
             </a>
 
 
@@ -159,7 +159,7 @@
                         <div class="blog-text">
 
                             <h5>Medical notes</h5>
-                            <p> Doctors can provide sick notes for school or work for short absences.</p>
+                            <p style="color: black;"> Doctors can provide sick notes for school or work for short absences.</p>
 
 
                         </div>
@@ -175,7 +175,7 @@
                         <!---text-->
                         <div class="blog-text">
                             <h5>Prescriptions</h5>
-                            <p> Doctors can give you a prescription based on your consultation.</p>
+                            <p style="color: black;"> Doctors can give you a prescription based on your consultation.</p>
 
                         </div>
                     </div>
@@ -190,7 +190,7 @@
                         <!---text-->
                         <div class="blog-text">
                             <h5>Medical Advice</h5>
-                            <p> Healthcare connects you with a doctor and help you get the help you need.</p>
+                            <p style="color: black;"> Healthcare connects you with a doctor and help you get the help you need.</p>
 
                         </div>
                     </div>
@@ -205,13 +205,57 @@
                         <!---text-->
                         <div class="blog-text">
                             <h5>Lab Work</h5>
-                            <p> Doctors on Healthcare can order lab work, such as blood tests.</p>
+                            <p style="color: black;"> Doctors on Healthcare can order lab work, such as blood tests.</p>
 
                         </div>
                     </div>
 
                 </div>
 
+            </section>
+        </div>
+
+
+           <!---BLOGS SECTION-->
+
+           <div class="AI-Section">
+
+            <!------Conditions-blogs------->
+            <section id="blog">
+
+                <!--heading--->
+                <div class="blog-heading">
+
+
+                    <h3> Blogs</h3>
+                    <p style="color: black;" >Welcome to our insightful Blogs section, where we share valuable healthcare tips and information to empower you on your wellness journey. </p>
+                    <p style="color: black;" >Our carefully curated blogs offer practical advice, actionable tips, and the latest insights to help you make informed decisions about your health.</p>
+                </div>
+
+                <!-------blog-container-->
+                <div class="blog-container">
+
+                    <!---box-->
+                    {% for blog in blogs_section %}
+                    <div class="blog-box">
+
+                        <!--img-->
+                        <div class="blog-img">
+                            {% if user.is_authenticated %}
+                            <a href="blog/{{blog.id}}"> <img src="{{blog.blog_image.url}}"> </a>
+                                {% else  %}
+                                <a href="accounts/login"> <img src="{{blog.blog_image.url}}"> </a> {% endif %} 
+                        </div>
+                        <!---text-->
+                        <div class="blog-text">
+                            <a href="braintumor" class="blog-title">{{blog.name}}</a>
+                            <p> {{blog.brief_description}}</p>
+                            <a href="#">Read More</a>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </section>
         </div>
 
@@ -225,13 +269,12 @@
                     <h5 class="text-white mb-3">Services</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">How it works</a></li>
+                        <li class="footer-menu-item"><a href="/#section_2" class="footer-menu-link">How it works</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Meet our doctors</a></li>
+                        <li class="footer-menu-item"><a href="ourdoctors" class="footer-menu-link">Meet our doctors</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Treatable conditions</a></li>
+                        <li class="footer-menu-item"><a href="/#blog" class="footer-menu-link">Treatable conditions</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">AI Doctor</a></li>
                     </ul>
                 </div>
 
@@ -239,13 +282,12 @@
                     <h5 class="text-white mb-3">Resources</h5>
 
                     <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Blog</a></li>
+                        <li class="footer-menu-item"><a href="ourdoctors#blog" class="footer-menu-link">Blog</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+                        <li class="footer-menu-item"><a href="/#nav-faq-tab" class="footer-menu-link">FAQs</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Testimonials</a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact us</a></li>
+                        <li class="footer-menu-item"><a href="/booking" class="footer-menu-link">Contact us</a></li>
                     </ul>
                 </div>
 
@@ -260,7 +302,7 @@
 
                         <li class="footer-menu-item"><a href="#" class="footer-menu-link">Anxiety treatment </a></li>
 
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">All Conditions</a></li>
+                        <li class="footer-menu-item"><a href="/#blog" class="footer-menu-link">All Conditions</a></li>
                     </ul>
                 </div>
 

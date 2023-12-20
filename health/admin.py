@@ -7,3 +7,5 @@ admin.site.register(Doctor)
 admin.site.register(Condition)
 
 admin.site.register(Booking)
+
+admin.site.register(Blog)

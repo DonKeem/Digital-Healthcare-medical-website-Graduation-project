@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from health.models import Condition, Doctor
+from health.models import Condition, Doctor, Blog
 from django.http import HttpResponse
 from .forms import BookingForm
 
@@ -12,18 +12,26 @@ from .forms import BookingForm
 def index(request):
 
     condition_blogs = Condition.objects.all()
+    return render(request, "index.html", {'condition_blogs': condition_blogs})
 
 
-    return render(request, "index.html", {'condition_blogs':condition_blogs})
+
+
 
 
 
 def our_doctors(request):
 
     doctors = Doctor.objects.all()
+    blogs_section = Blog.objects.all()
+    return render(request, 'ourdoctors.html', {'doctors': doctors, 'blogs_section': blogs_section })
 
-    return render(request, 'ourdoctors.html', {'doctors': doctors})
 
+
+def blog(request,blog_id):
+
+    desired_blog = Blog.objects.get(id = blog_id)
+    return render (request, 'blog.html', {'desired_blog':desired_blog})
 
 
 def vision(request):

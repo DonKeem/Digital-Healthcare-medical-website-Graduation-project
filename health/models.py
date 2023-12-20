@@ -57,3 +57,22 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.condition_field
+
+
+
+
+
+class Blog(models.Model):
+
+    name = models.CharField(max_length=50)
+    brief_description = models.CharField(max_length=100)
+    first_paragraph = models.CharField(max_length=500)
+    second_paragraph = models.CharField(max_length=500)
+    third_paragraph = models.CharField(max_length=500)
+    question_one = models.CharField(max_length=50)
+    question_two = models.CharField(max_length=50)
+    question_three = models.CharField(max_length=50)
+    answer_one = models.CharField(max_length=400)
+    answer_two = models.CharField(max_length=400)
+    answer_three = models.CharField(max_length=400)
+    blog_image = models.ImageField()
