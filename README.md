@@ -9,34 +9,59 @@ Welcome to the HealthCare project repository! This project represents my graduat
 
 HealthCare is a comprehensive medical healthcare website designed to connect patients, medical professionals, and healthcare services in a user-friendly and efficient manner. This project showcases a range of features and technologies that contribute to its innovative and transformative nature.
 
-## Key Project Highlights
+# Getting Started
 
-- **AI-Driven Brain Tumor Detection:** Leveraging Machine Learning and Convolutional Neural Networks (CNN), the website incorporates an advanced model capable of detecting brain tumors from MRI scans. This technology plays a pivotal role in early detection and potentially saving lives.
+## Dependencies
+Requires installing Docker for image building and to start the project swiftly.
+- [Docker](https://www.docker.com/) 
 
-- **Seamless Doctor-Patient Communication:** The website includes a state-of-the-art chat application that enables real-time communication between doctors and patients. Developed using Django Channels, this feature ensures secure and instant interactions, fostering stronger doctor-patient relationships.
+## Installing
+1. Clone the program repository to your local machine.
+   ```bash
+   git clone https://github.com/DonKeem/Digital-Healthcare-medical-website-Graduation-project.git
 
-- **Effortless Doctor Discovery:** The platform features an "Our Doctors" page showcasing detailed profiles of healthcare professionals. This feature, managed through Django, offers quick updates and convenient access to crucial information.
+## Executing program
+Open the command prompt (cmd) and navigate to the project's main folder.
 
-- **Robust User Authentication and Authorization:** Prioritizing patient privacy, the website employs secure user authentication and authorization mechanisms provided by Django. This ensures data protection and controlled access to services, fostering a secure user experience.
+Run the following command to build the Docker image and start the server:
+```bash
+docker-compose up -d
+```
+This command will build the image if it doesn't exist,it downloads the requirements first and then build the image (our working environment).
 
+Note: If you want to close the container and shut down the server, use the following command:
+```bash
+docker-compose down
+```
 ## Technologies Used
 
 During the development phase, a diverse range of cutting-edge technologies was harnessed, including:
 
-- Docker and Git for streamlined version control and deployment.
-- Python and Django for robust backend architecture and rapid development.
-- Machine Learning and Convolutional Neural Networks for brain tumor detection, advancing medical diagnostics.
-- Django Channels for building efficient web sockets and channels between doctors and patients.
-- Django's authentication system for ensuring robust user privacy and security.
-- HTML, CSS, and JavaScript for creating an engaging and user-friendly frontend experience.
+- Docker
+- Git
+- Python
+- Django
+- Machine Learning
+- Convolutional Neural Networks
+- Django Channels
+- WebSockets
+- HTML
+- CSS
+- JavaScript
 
 ## Project Vision
 
-This project represents Phase 1 of my vision. Moving forward, I plan to continue developing and expanding HealthCare, aiming to host the website and provide an even broader range of essential healthcare services to the community free of charge. My ultimate goal is to ensure equitable access to quality healthcare resources for all individuals.
+This project is Phase 1 of the Smart Society Healthcare System (SSHS) within the grand idea of Smart Society Initiatives. It's an independent concept integral to the broader vision, focusing on expanding HealthCare to provide free essential services for equitable access.
+
+## Author
+
+Karim Soliman
+
+This is my Graduation Project. It is not affiliated with any specific organization or institution.
 
 ## Get Involved
 
-I invite you to explore the HealthCare website and provide your valuable feedback. Feel free to connect with me to discuss potential collaborations, ideas, or contributions. You can explore the project's repository and contribute by visiting (https://github.com/DonKeem/Digital-Healthcare-medical-website-Graduation-project/new/master?readme=1).
+I invite you to explore the HealthCare website and provide your valuable feedback. Feel free to connect with me to discuss potential collaborations, ideas, or contributions. You can explore the project's repository and contribute.
 
 Together, let's work towards a brighter, healthier future through the power of innovation!
 
@@ -45,7 +70,3 @@ Together, let's work towards a brighter, healthier future through the power of i
 For inquiries, collaborations, or discussions, you can reach me at [karim.m.s.soliman@gmail.com].
 
 ---
-
-## Project Details
-
-This project was developed by Karim Soliman as a graduation project. It is not affiliated with any specific organization or institution.
