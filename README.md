@@ -27,7 +27,7 @@ Run the following command to build the Docker image and start the server:
 ```bash
 docker-compose up -d
 ```
-This command will build the image if it doesn't exist, or download the requirements first and then build the image (our working environment).
+This command will build the image if it doesn't exist,it downloads the requirements first and then build the image (our working environment).
 
 Note: If you want to close the container and shut down the server, use the following command:
 ```bash
@@ -61,7 +61,7 @@ This is my Graduation Project. It is not affiliated with any specific organizati
 
 ## Get Involved
 
-I invite you to explore the HealthCare website and provide your valuable feedback. Feel free to connect with me to discuss potential collaborations, ideas, or contributions. You can explore the project's repository and contribute by visiting (https://github.com/DonKeem/Digital-Healthcare-medical-website-Graduation-project/new/master?readme=1).
+I invite you to explore the HealthCare website and provide your valuable feedback. Feel free to connect with me to discuss potential collaborations, ideas, or contributions. You can explore the project's repository and contribute.
 
 Together, let's work towards a brighter, healthier future through the power of innovation!
 
