@@ -24,12 +24,15 @@ Requires installing Docker for image building and to start the project swiftly.
 Open the command prompt (cmd) and navigate to the project's main folder.
 
 Run the following command to build the Docker image and start the server:
+```bash
 docker-compose up -d
+```
 This command will build the image if it doesn't exist, or download the requirements first and then build the image (our working environment).
 
 Note: If you want to close the container and shut down the server, use the following command:
+```bash
 docker-compose down
-
+```
 ## Technologies Used
 
 During the development phase, a diverse range of cutting-edge technologies was harnessed, including:
